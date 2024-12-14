@@ -6,6 +6,100 @@
     <title>წიგნები</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Georgian', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .book-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .book-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .book-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .book-item h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .book-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .book-item .author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,11 +107,9 @@
             <h1>წიგნები და ლიტერატურა</h1>
             <nav>
                 <ul>
-                    <!-- Ensure this link points to the correct location of main_page.html -->
                     <li><a href="main_page.html">მთავარი</a></li>
                     <li><a href="books.html" class="active">წიგნები</a></li>
                     <li><a href="poetry.html">პოეზია</a></li>
-                    <!-- Ensure the file name here matches exactly with your file -->
                     <li><a href="about_us.html">ჩვენს შესახებ</a></li>
                 </ul>
             </nav>
@@ -28,21 +120,63 @@
         <div class="container">
             <h2>ჩვენი წიგნები</h2>
             <div class="book-list">
+                <!-- Book 1: To Kill a Mockingbird -->
                 <div class="book-item">
-                    <img src="book1.jpg" alt="Book 1">
-                    <h3>წიგნი 1</h3>
-                    <p>წიგნის მოკლე აღწერა. ეს არის საინტერესო ნაწარმოები, რომელიც შეცვლის თქვენი მსოფლმხედველობას.</p>
+                    <img src="https://covers.openlibrary.org/b/id/8225267-L.jpg" alt="To Kill a Mockingbird">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="author">ავტორი: Harper Lee</p>
+                    <p>წიგნი მოგვითხრობს პატარა ქალაქის ცხოვრებაზე, სადაც წამყვანი თემა რასიზმის წინააღმდეგ ბრძოლაა. წიგნი ძალიან გავლენიანი გახდა ამერიკულ ლიტერატურაში.</p>
                 </div>
+
+                <!-- Book 2: 1984 -->
                 <div class="book-item">
-                    <img src="book2.jpg" alt="Book 2">
-                    <h3>წიგნი 2</h3>
-                    <p>წიგნის მოკლე აღწერა. აქ მოთხრობილია საოცარი თავგადასავალი.</p>
+                    <img src="https://covers.openlibrary.org/b/id/7196197-L.jpg" alt="1984">
+                    <h3>1984</h3>
+                    <p class="author">ავტორი: George Orwell</p>
+                    <p>მომავლის დისტოპიურ სამყაროში აღწერილია სულისშემძვრელი ტოტალიტარული რეჟიმი, სადაც ხალხს კონტროლი ედება. ეს არის წიგნი თავისუფლების და პირადი უფლებების დაკარგვის შესახებ.</p>
                 </div>
+
+                <!-- Book 3: The Great Gatsby -->
                 <div class="book-item">
-                    <img src="book3.jpg" alt="Book 3">
-                    <h3>წიგნი 3</h3>
-                    <p>წიგნის მოკლე აღწერა. წიგნი, რომელიც მიგიყვანთ ემოციურ პიკამდე.</p>
+                    <img src="https://covers.openlibrary.org/b/id/8214109-L.jpg" alt="The Great Gatsby">
+                    <h3>The Great Gatsby</h3>
+                    <p class="author">ავტორი: F. Scott Fitzgerald</p>
+                    <p>მომხდარია ამერიკის "დიდი ოცნებების" ეპოქაში. წიგნი აღწერს ახლო ურთიერთობებს, ფუფუნებას, შუღლს და დაკარგულ შესაძლებლობებს.</p>
                 </div>
+
+                <!-- Book 4: Moby-Dick -->
+                <div class="book-item">
+                    <img src="https://covers.openlibrary.org/b/id/10544766-L.jpg" alt="Moby-Dick">
+                    <h3>Moby-Dick</h3>
+                    <p class="author">ავტორი: Herman Melville</p>
+                    <p>ამ წიგნში აღწერილია ნიუ-ინგლანდელი გემის კაპიტანი, რომელიც მთელი თავისი ცხოვრება ცდილობს დაეწიოს თეთრ ვეშაპს, რომელიც მას გაანადგურა.</p>
+                </div>
+
+                <!-- Book 5: Pride and Prejudice -->
+                <div class="book-item">
+                    <img src="https://covers.openlibrary.org/b/id/8714257-L.jpg" alt="Pride and Prejudice">
+                    <h3>Pride and Prejudice</h3>
+                    <p class="author">ავტორი: Jane Austen</p>
+                    <p>რომანი სიყვარულზე, პატიოსნებაზე და ოჯახის მნიშვნელობაზე, სადაც ერთმანეთისგან განსხვავებული სოციალური კლასები ცდილობენ დაიპყრონ ერთმანეთის გული.</p>
+                </div>
+
+                <!-- Book 6: The Catcher in the Rye -->
+                <div class="book-item">
+                    <img src="https://covers.openlibrary.org/b/id/6823230-L.jpg" alt="The Catcher in the Rye">
+                    <h3>The Catcher in the Rye</h3>
+                    <p class="author">ავტორი: J.D. Salinger</p>
+                    <p>გულიანად მოზარდი ჰოლდენ კოლფილდი არის ამ წიგნის მთავარი გმირი, რომელიც ემოციებსა და ცხოვრებისეულ სირთულეებს გაუმკლავდება.</p>
+                </div>
+
+                <!-- Book 7: Brave New World -->
+                <div class="book-item">
+                    <img src="https://covers.openlibrary.org/b/id/11879276-L.jpg" alt="Brave New World">
+                    <h3>Brave New World</h3>
+                    <p class="author">ავტორი: Aldous Huxley</p>
+                    <p>წიგნი მოგვითხრობს ტექნოლოგიური დისტოპიის სამყაროზე, სადაც ადამიანები აღზრდილები არიან ხელისუფლების მეთვალყურეობის ქვეშ, რათა თავიდან აიცილონ აურაცხელ სირთულეები.</p>
+                </div>
+
+                <!-- More books can be added below -->
             </div>
         </div>
     </section>
