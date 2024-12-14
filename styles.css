@@ -30,6 +30,7 @@ header {
 header h1 {
     text-align: center;
     font-size: 2.5rem;
+    font-weight: bold;
 }
 
 nav ul {
@@ -49,10 +50,13 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
+    padding: 5px 10px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: #f39c12;
+    border-bottom: 2px solid #f39c12;
 }
 
 /* Hero Section */
@@ -64,7 +68,7 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -84,54 +88,59 @@ nav ul li a:hover {
 .about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
 .about p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 900px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* Books Section */
-.books {
+/* Poetry Section */
+.poetry {
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
 }
 
-.books h2 {
+.poetry h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #2c3e50;
 }
 
-.book-list {
+.poetry p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.poetry-list {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.book-item {
+.poem-item {
     background-color: #ecf0f1;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 30%;
+    margin-bottom: 20px;
 }
 
-.book-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.book-item h3 {
+.poem-item h3 {
     font-size: 1.5rem;
     margin-top: 20px;
 }
 
-.book-item p {
+.poem-item p {
     font-size: 1rem;
     margin-top: 10px;
 }
