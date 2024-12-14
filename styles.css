@@ -7,7 +7,7 @@
 
 /* Body and Fonts */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans Georgian', Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -90,6 +90,50 @@ nav ul li a:hover {
     font-size: 1.1rem;
     max-width: 900px;
     margin: 0 auto;
+}
+
+/* Books Section */
+.books {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.books h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.book-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-item h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.book-item p {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* Footer Styles */
