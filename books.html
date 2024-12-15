@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>წიგნები</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* General styles */
         body {
@@ -26,8 +25,9 @@
             margin: 0 auto;
         }
 
-        h1, h2 {
+        h1 {
             text-align: center;
+            font-size: 36px;
         }
 
         nav ul {
@@ -90,7 +90,6 @@
             font-weight: bold;
             color: #2c3e50;
             cursor: pointer;
-            text-decoration: underline;
         }
 
         footer {
@@ -101,51 +100,32 @@
         }
 
         /* Modal styles */
-        .modal {
+        .author-modal {
             display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            width: 80%;
-            max-width: 500px;
-            padding: 20px;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
             z-index: 1000;
         }
 
-        .modal-header {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .modal-content {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .modal-close {
-            float: right;
-            cursor: pointer;
+        .author-modal h4 {
+            margin: 0;
             font-size: 18px;
+        }
+
+        .author-modal p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .author-modal .close {
+            text-align: right;
+            font-size: 16px;
             color: red;
-        }
-
-        .stars {
-            display: flex;
-            gap: 5px;
-        }
-
-        .stars span {
             cursor: pointer;
-            font-size: 24px;
-            color: #ccc;
-        }
-
-        .stars span.selected {
-            color: gold;
         }
     </style>
 </head>
@@ -164,31 +144,54 @@
         </div>
     </header>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h2>წიგნები</h2>
+            <p>აქ შეგიძლიათ იხილოთ ჩვენი წიგნების სია.</p>
+        </div>
+    </section>
+
     <section class="books">
         <div class="container">
             <h2>ჩვენი წიგნები</h2>
             <div class="book-list">
+                <!-- Book 1 -->
                 <div class="book-item">
                     <img src="https://apiv1.biblusi.ge/storage/book/9OynNOykTNGiRCQPK5a4SpZLhYadI1uLLMPbJwCP.png" alt="ოსტატი და მარგარიტა">
                     <h3>"ოსტატი და მარგარიტა"</h3>
                     <p class="author" data-author="bulgakov">ავტორი: მიხეილ ბულგაკოვი</p>
                 </div>
+
+                <!-- Book 2 -->
+                <div class="book-item">
+                    <img src="https://apiv1.biblusi.ge/storage/book/bWivKDyzTkxLopR7loA42m6yr6ihZkNYVFJqaCvE.jpg" alt="დანაშაული და სასჯელი">
+                    <h3>"დანაშაული და სასჯელი"</h3>
+                    <p class="author" data-author="dostoevsky">ავტორი: ფიოდორ დოსტოევსკი</p>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-item">
+                    <img src="https://apiv1.biblusi.ge/storage/book/SnjoPt1NQ0fB9rk6Fjtq3MHmrT046fCmiyXG5mLb.jpg" alt="ომი და მშვიდობა">
+                    <h3>"ომი და მშვიდობა"</h3>
+                    <p class="author" data-author="tolstoy">ავტორი: ლევ ტოლსტოი</p>
+                </div>
+
+                <!-- Book 4 -->
+                <div class="book-item">
+                    <img src="https://sulakauri.ge/uploads/2023/11/sherlok-holmsis-thavgadasavali-dzveli.webp" alt="შერლოკ ჰოლმსი">
+                    <h3>"შერლოკ ჰოლმსი"</h3>
+                    <p class="author" data-author="doyle">ავტორი: ართურ კონან დოილ</p>
+                </div>
+
+                <!-- Book 5 -->
+                <div class="book-item">
+                    <img src="https://apiv1.biblusi.ge/storage/book/CvARNljvVBYEjItqR4iwHBjKvgyj5zZcG6phzZ7A.jpg" alt="მკვლელობა აღმოსავლეთის ექსპრესში">
+                    <h3>"მკვლელობა აღმოსავლეთის ექსპრესში"</h3>
+                    <p class="author" data-author="christie">ავტორი: აგათა კრისტი</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <div class="modal" id="author-modal">
-        <span class="modal-close" id="close-modal">X</span>
-        <div class="modal-header" id="modal-title"></div>
-        <div class="modal-content" id="modal-description"></div>
-        <div class="stars" id="rating-stars">
-            <span data-value="1">★</span>
-            <span data-value="2">★</span>
-            <span data-value="3">★</span>
-            <span data-value="4">★</span>
-            <span data-value="5">★</span>
-        </div>
-    </div>
 
     <footer>
         <div class="container">
@@ -196,41 +199,59 @@
         </div>
     </footer>
 
+    <!-- Modal template -->
+    <div class="author-modal" id="author-modal">
+        <div class="close" id="close-modal">X</div>
+        <h4 id="author-name"></h4>
+        <p id="author-bio"></p>
+    </div>
+
     <script>
         const authors = {
             bulgakov: {
                 name: "მიხეილ ბულგაკოვი",
-                bio: "მიხეილ ბულგაკოვი იყო რუსი მწერალი და დრამატურგი, ცნობილი თავისი შედევრებით, როგორიცაა 'ოსტატი და მარგარიტა'.",
+                bio: "მიხეილ ბულგაკოვი იყო რუსი მწერალი, რომელიც ცნობილია თავისი რომანით 'ოსტატი და მარგარიტა'.",
+            },
+            dostoevsky: {
+                name: "ფიოდორ დოსტოევსკი",
+                bio: "ფიოდორ დოსტოევსკი იყო მსოფლიო მნიშვნელობის რუსი მწერალი და მოაზროვნე.",
+            },
+            tolstoy: {
+                name: "ლევ ტოლსტოი",
+                bio: "ლევ ტოლსტოი იყო რუსი მწერალი და ფილოსოფოსი, ცნობილი თავისი რომანებით 'ომი და მშვიდობა' და 'ანა კარენინა'.",
+            },
+            doyle: {
+                name: "ართურ კონან დოილი",
+                bio: "ართურ კონან დოილი იყო ბრიტანელი მწერალი, რომელმაც შექმნა შერლოკ ჰოლმსის პერსონაჟი.",
+            },
+            christie: {
+                name: "აგათა კრისტი",
+                bio: "აგათა კრისტი იყო ცნობილი ბრიტანელი დეტექტიური ჟანრის მწერალი, 'პუაროს' სერიის ავტორი.",
             }
         };
 
-        const modal = document.getElementById("author-modal");
-        const modalTitle = document.getElementById("modal-title");
-        const modalDescription = document.getElementById("modal-description");
-        const stars = document.querySelectorAll("#rating-stars span");
-        const closeModal = document.getElementById("close-modal");
+        const authorElements = document.querySelectorAll('.author');
+        const modal = document.getElementById('author-modal');
+        const modalName = document.getElementById('author-name');
+        const modalBio = document.getElementById('author-bio');
+        const closeModal = document.getElementById('close-modal');
 
-        document.querySelectorAll(".author").forEach(authorElement => {
-            authorElement.addEventListener("click", () => {
-                const authorId = authorElement.getAttribute("data-author");
-                const author = authors[authorId];
+        authorElements.forEach(el => {
+            el.addEventListener('click', (e) => {
+                const authorKey = el.getAttribute('data-author');
+                const author = authors[authorKey];
                 if (author) {
-                    modalTitle.textContent = author.name;
-                    modalDescription.textContent = author.bio;
-                    modal.style.display = "block";
+                    modalName.textContent = author.name;
+                    modalBio.textContent = author.bio;
+                    modal.style.display = 'block';
+                    modal.style.top = `${e.clientY}px`;
+                    modal.style.left = `${e.clientX}px`;
                 }
             });
         });
 
-        closeModal.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        stars.forEach(star => {
-            star.addEventListener("click", () => {
-                stars.forEach(s => s.classList.remove("selected"));
-                star.classList.add("selected");
-            });
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
         });
     </script>
 </body>
