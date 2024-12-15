@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>წიგნები</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* General styles */
         body {
             font-family: 'Noto Sans Georgian', sans-serif;
             margin: 0;
@@ -47,11 +47,24 @@
             font-size: 18px;
         }
 
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
         .hero {
             background-color: #2c3e50;
             color: white;
             padding: 50px 0;
             text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
         }
 
         .book-list {
@@ -86,10 +99,15 @@
             color: #2c3e50;
         }
 
+        .book-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
         .book-item .author {
             font-weight: bold;
             color: #2c3e50;
-            cursor: pointer;
         }
 
         footer {
@@ -97,35 +115,6 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-        }
-
-        /* Modal styles */
-        .author-modal {
-            display: none;
-            position: absolute;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            z-index: 1000;
-        }
-
-        .author-modal h4 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .author-modal p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-
-        .author-modal .close {
-            text-align: right;
-            font-size: 16px;
-            color: red;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -159,35 +148,44 @@
                 <div class="book-item">
                     <img src="https://apiv1.biblusi.ge/storage/book/9OynNOykTNGiRCQPK5a4SpZLhYadI1uLLMPbJwCP.png" alt="ოსტატი და მარგარიტა">
                     <h3>"ოსტატი და მარგარიტა"</h3>
-                    <p class="author" data-author="bulgakov">ავტორი: მიხეილ ბულგაკოვი</p>
+                    <p class="author">ავტორი: მიხეილ ბულგაკოვი</p>
+                    <p>"ოსტატი და მარგარიტა" მსოფ.ლიტერატურის ისტორიაშია ერთ-ერთი ყველაზე იდუმალებით მოცული რომანია, რომლის არსის ამოხსნაზე დღემდე მსჯელობენ და კამათობენ კრიტიკოსები, ფილოსოფოსები, მწერლები. ამ ნაწარმოებში ნებისმიერი გემოვნების მკითხველი იპოვნის მისთვის საინტერესოს: სახელწოდება იმთავითვე გვაუწყებს, რომ ხელოვნების რაობაზე დაფიქრება და ამაღლებულ სიყვარულთან ზიარება მოგვიწევს; თქვენ წინაშეა მარადიული წიგნი მარადიულ საკითხზე.</p>
                 </div>
 
                 <!-- Book 2 -->
                 <div class="book-item">
                     <img src="https://apiv1.biblusi.ge/storage/book/bWivKDyzTkxLopR7loA42m6yr6ihZkNYVFJqaCvE.jpg" alt="დანაშაული და სასჯელი">
                     <h3>"დანაშაული და სასჯელი"</h3>
-                    <p class="author" data-author="dostoevsky">ავტორი: ფიოდორ დოსტოევსკი</p>
+                    <p class="author">ავტორი: ფიოდორ დოსტოევსკი</p>
+                    <p>რომანი პირველად 1866 წელს დაიბეჭდა და მაშინვე დიდი გამოხმაურება და მსოფლიო აღიარება მოუპოვა ავტორს. ეს ნაწარმოები ფსიქოლოგიური ისტორიაა დანაშაულისა და მისი ზნეობრივი შედეგებისა. თვით ავტორი თავის რომანზე ამბობდა: " ადამიანი ბედნიერებისათვის არ იბადება, ადამიანმა უნდა დაიმსახუროს თავისი ბედნიერება..."</p>
                 </div>
 
                 <!-- Book 3 -->
                 <div class="book-item">
                     <img src="https://apiv1.biblusi.ge/storage/book/SnjoPt1NQ0fB9rk6Fjtq3MHmrT046fCmiyXG5mLb.jpg" alt="ომი და მშვიდობა">
                     <h3>"ომი და მშვიდობა"</h3>
-                    <p class="author" data-author="tolstoy">ავტორი: ლევ ტოლსტოი</p>
+                    <p class="author">ავტორი: ლევ ტოლსტოი</p>
+                    <p>"„ომი და მშვიდობა“ XIX საუკუნის 60-იან წლებში დაიწერა. ყირიმის ომში რუსეთი დამარცხებულია. უდიდესი მწერალი ლევ ტოლსტოი, როგორც ჭეშმარიტი შემოქმედი და ჰუმანისტი, მძაფრად განიცდის მარცხს. ამ განცდით ატანილი და საკუთარ თავთან დარჩენილი მწერალი მუშაობას იწყებს ყველა დროის ერთ-ერთ უდიდეს რომანზე. რომანი სტრუქტურულად რამდენიმე ანტითემაზეა აგებული - ერთმანეთს უპირისპირდება ორი ომი და ორი ბრძოლა, ორი მხედართმთავარი და ორი ქალაქი და სათაური - ომი და მშვიდობა."
+
+                    </p>
                 </div>
+
+
 
                 <!-- Book 4 -->
                 <div class="book-item">
                     <img src="https://sulakauri.ge/uploads/2023/11/sherlok-holmsis-thavgadasavali-dzveli.webp" alt="შერლოკ ჰოლმსი">
                     <h3>"შერლოკ ჰოლმსი"</h3>
-                    <p class="author" data-author="doyle">ავტორი: ართურ კონან დოილ</p>
+                    <p class="author">ავტორი: ართურ კონან დოილ</p>
+                    <p>ართურ კონან დოილის მიერ შექმნილი ლიტერატურული პერსონაჟი, ლეგენდარული გამომძიებელი შერლოკ ჰოლმსი დღემდე უდიდესი პოპულარობით სარგებლობს. კონან დოილმა 4 რომანი და 56 მოთხრობა დაწერა შერლოკ ჰოლმსზე და ყოველი მათგანი დეტექტიური ჟანრის კლასიკად იქცა. ჩახლართული დანაშაულის შესახებ დოქტორი უოტსონი გვიამბობს, თუმცა გამოძიების ბოლომდე არც მას და არც მკითხველს არ ესმით, როგორ ხსნის დეტექტივი ყველაზე იდუმალ დანაშაულს, სანამ ამბის დასასრულს თავად არ განგვიმარტავს „დედუქციური მეთოდის“ საიდუმლოს.</p>
                 </div>
 
-                <!-- Book 5 -->
+                <!-- Book 6 -->
                 <div class="book-item">
                     <img src="https://apiv1.biblusi.ge/storage/book/CvARNljvVBYEjItqR4iwHBjKvgyj5zZcG6phzZ7A.jpg" alt="მკვლელობა აღმოსავლეთის ექსპრესში">
                     <h3>"მკვლელობა აღმოსავლეთის ექსპრესში"</h3>
-                    <p class="author" data-author="christie">ავტორი: აგათა კრისტი</p>
+                    <p class="author">ავტორი: აგათა კრისტი</p>
+                    <p>დეტექტივი ერკიულ პუარო ადის აღმოსავლეთის ექსპრესში, სადაც თავს მოიყრის უამრავი ადამიანი. მგზავრობის პირველ ღამეს მოხდება მკვლელობა. ერკიულ პუარო თავის თავზე იღებს ვალდებულებას გახსნას ერთი შეხედვით გაუხსნელი საქმე.</p>
                 </div>
             </div>
         </div>
@@ -198,61 +196,5 @@
             <p>© 2024 წიგნები და ლიტერატურა. ყველა უფლება დაცულია.</p>
         </div>
     </footer>
-
-    <!-- Modal template -->
-    <div class="author-modal" id="author-modal">
-        <div class="close" id="close-modal">X</div>
-        <h4 id="author-name"></h4>
-        <p id="author-bio"></p>
-    </div>
-
-    <script>
-        const authors = {
-            bulgakov: {
-                name: "მიხეილ ბულგაკოვი",
-                bio: "მიხეილ ბულგაკოვი იყო რუსი მწერალი, რომელიც ცნობილია თავისი რომანით 'ოსტატი და მარგარიტა'.",
-            },
-            dostoevsky: {
-                name: "ფიოდორ დოსტოევსკი",
-                bio: "ფიოდორ დოსტოევსკი იყო მსოფლიო მნიშვნელობის რუსი მწერალი და მოაზროვნე.",
-            },
-            tolstoy: {
-                name: "ლევ ტოლსტოი",
-                bio: "ლევ ტოლსტოი იყო რუსი მწერალი და ფილოსოფოსი, ცნობილი თავისი რომანებით 'ომი და მშვიდობა' და 'ანა კარენინა'.",
-            },
-            doyle: {
-                name: "ართურ კონან დოილი",
-                bio: "ართურ კონან დოილი იყო ბრიტანელი მწერალი, რომელმაც შექმნა შერლოკ ჰოლმსის პერსონაჟი.",
-            },
-            christie: {
-                name: "აგათა კრისტი",
-                bio: "აგათა კრისტი იყო ცნობილი ბრიტანელი დეტექტიური ჟანრის მწერალი, 'პუაროს' სერიის ავტორი.",
-            }
-        };
-
-        const authorElements = document.querySelectorAll('.author');
-        const modal = document.getElementById('author-modal');
-        const modalName = document.getElementById('author-name');
-        const modalBio = document.getElementById('author-bio');
-        const closeModal = document.getElementById('close-modal');
-
-        authorElements.forEach(el => {
-            el.addEventListener('click', (e) => {
-                const authorKey = el.getAttribute('data-author');
-                const author = authors[authorKey];
-                if (author) {
-                    modalName.textContent = author.name;
-                    modalBio.textContent = author.bio;
-                    modal.style.display = 'block';
-                    modal.style.top = `${e.clientY}px`;
-                    modal.style.left = `${e.clientX}px`;
-                }
-            });
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
