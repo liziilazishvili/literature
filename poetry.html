@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ქართული პოეზია</title>
+    <title>ქართული და უცხოელი პოეტები</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
     <style>
         body {
@@ -45,7 +45,11 @@
             font-size: 18px;
         }
 
-        .poetry {
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        section {
             margin: 30px 0;
         }
 
@@ -62,12 +66,14 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
-        .poem-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #2c3e50;
+        .poem-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .poem-item img {
@@ -83,68 +89,118 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Header Section -->
+    <header class="fade-in">
         <div class="container">
-            <h1>ქართული პოეზია</h1>
+            <h1>ქართული და უცხოელი პოეტები</h1>
             <nav>
                 <ul>
                     <li><a href="main_page.html">მთავარი</a></li>
                     <li><a href="books.html">წიგნები</a></li>
                     <li><a href="poetry.html" class="active">პოეზია</a></li>
-                    <li><a href="about.html">ჩვენს შესახებ</a></li>
+                    <li><a href="about_us.html">ჩვენს შესახებ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Georgian Poets Section -->
     <section class="poetry">
         <div class="container">
-            <h2>ქართული პოეზია</h2>
-            <p>ქართული პოეზია გამოხატავს საქართველოს სიყვარულს და მისი პოეტური სულის გამოძახილს. აქ წარმოდგენილია პოემები სამშობლოზე.</p>
+            <h2 class="fade-in">ქართული პოეზია</h2>
+            <p class="fade-in">ქართული პოეზია გამოხატავს საქართველოს სიყვარულს და მისი პოეტური სულის გამოძახილს. აქ წარმოდგენილია პოემები სამშობლოზე.</p>
             <div class="poetry-list">
-                <!-- Georgian Poems from the provided page -->
                 <div class="poem-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_bRshph1Grqf9i1TWb2vXaja2UC2YQmmPbg&s" alt="სამშობლო">
-                    
-                    <p>ავტორი: აკაკი წერეთელი</p>
-                    
+                    <p>აკაკი წერეთელი</p>
                 </div>
                 <div class="poem-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpR1AE5FXCMtF5qmbeRvSWheWPc_UGVAODSA&s" alt="დედა სამშობლო">
-                    
-                    <p>ავტორი: გალაკტიონ ტაბიძე</p>
-                    
+                    <p>გალაკტიონ ტაბიძე</p>
                 </div>
                 <div class="poem-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtAqzjiovV16tp0PUCkK9Wkw3DSmQPKRqILA&s" alt="გულით სამშობლოსთვის">
-                    
-                    <p>ავტორი: ვაჟა-ფშაველა</p>
-                    
+                    <p>ვაჟა-ფშაველა</p>
                 </div>
                 <div class="poem-item">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Ilia_Tchavtchavadze.jpg/640px-Ilia_Tchavtchavadze.jpg" alt="პატრიოტი">
-                    
-                    <p>ავტორი: ილია ჭავჭავაძე</p>
-                    
+                    <p>ილია ჭავჭავაძე</p>
                 </div>
                 <div class="poem-item">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/%E1%83%9C%E1%83%98%E1%83%99%E1%83%9D%E1%83%9A%E1%83%9D%E1%83%96_%E1%83%91%E1%83%90%E1%83%A0%E1%83%90%E1%83%97%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98.jpg" alt="ლექსი საქართველოსთვის">
-                    
-                    <p>ავტორი: ნიკოლოზ ბარათაშვილი</p>
-                    
+                    <p>ნიკოლოზ ბარათაშვილი</p>
                 </div>
-               >
             </div>
         </div>
     </section>
 
+    <!-- Foreign Poets Section -->
+    <section class="poetry">
+        <div class="container">
+            <h2 class="fade-in">უცხოელი პოეტები</h2>
+            <p class="fade-in">უცხოელი პოეტების ლექსები მრავალფეროვნებასა და გრძნობების სიღრმეს ავლენენ. აქ წარმოგიდგენთ მსოფლიო ლიტერატურის საგანძურს.</p>
+            <div class="poetry-list">
+                <div class="poem-item">
+                    <img src="https://apiv1.biblusi.ge/storage/author/lU7pjn16Tjy76zLWH5TqN6YvTcqkmsXTDhUCKP0n.jpg" alt="შექსპირი">
+                    <p>უილიამ შექსპირი</p>
+                </div>
+                <div class="poem-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwX6rZ_VLwrOK9E86bK6C8RtHY1kFMWllc-Ca4Aux1mwu1j7A7" alt="ედგარ ალან პო">
+                    <p>ედგარ ალან პო</p>
+                </div>
+                <div class="poem-item">
+                    <img src="https://www.lit.ge//shop/uploads/shop_person_main_9885.jpg" alt="იოჰან ვოლფგანგ გოეთე">
+                    <p>იოჰან ვოლფგანგ გოეთე</p>
+                </div>
+                <div class="poem-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRCqdoXT7WKXfdpARoW0LR-rAJZ0GyfSrLjizfzLY5N2IGELVKc1R1cf7IPju2XCYXl8dq3YmfofCHbhH21Yax5ArAlgzGdu8Sm-6TGA" alt="ალექსანდრე სერგეევიჩ პუშკინი">
+                    <p>ალექსანდრე სერგეევიჩ პუშკინი</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>© 2024 წიგნები და ლიტერატურა. ყველა უფლება დაცულია.</p>
         </div>
     </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const poemItems = document.querySelectorAll('.poem-item');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            poemItems.forEach(item => observer.observe(item));
+        });
+    </script>
 </body>
 </html>
