@@ -6,6 +6,8 @@
     <title>წიგნები და ლიტერატურა</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +18,7 @@
                     <li><a href="index.html" class="active">მთავარი</a></li>
                     <li><a href="books.html">წიგნები</a></li>
                     <li><a href="poetry.html">პოეზია</a></li>
-                    <li><a href="about_us.html">ჩვენს შესახებ</a></li> <!-- Updated link here -->
+                    <li><a href="about_us.html">ჩვენს შესახებ</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,6 +28,52 @@
         <div class="hero-content">
             <h2>დაიწყეთ ლიტერატურის სამყაროში მოგზაურობა</h2>
             <p>წიგნები და ლიტერატურა - თქვენი ადგილი, სადაც შეგიძლიათ გაეცნოთ ახალ წიგნებსა და ლიტერატურულ სამყაროს.</p>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <h2>სიახლეები</h2>
+            <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="news1.jpg" class="d-block w-100" alt="ახალი წიგნის პრეზენტაცია">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>ახალი წიგნის პრეზენტაცია</h5>
+                            <p>წიგნის „მწვანე ხე“ პრეზენტაცია ჩატარდება 20 იანვარს.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="news2.jpg" class="d-block w-100" alt="ლიტერატურული კონკურსი">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>ლიტერატურული კონკურსი</h5>
+                            <p>მონაწილეობის მისაღებად დარეგისტრირდით 31 იანვრამდე.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="news3.jpg" class="d-block w-100" alt="საუკეთესო პოეტური კრებული">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>საუკეთესო პოეტური კრებული</h5>
+                            <p>წლის პოეტური კრებულად დასახელდა „შუაღამის ჩანაწერები“.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="news4.jpg" class="d-block w-100" alt="კლასიკური ლიტერატურის ახალი თარგმანები">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>კლასიკური ლიტერატურის ახალი თარგმანები</h5>
+                            <p>კლასიკური ნაწარმოებების ახალი ქართული თარგმანები უკვე ბიბლიოთეკაში.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -41,5 +89,8 @@
             <p>© 2024 წიგნები და ლიტერატურა. ყველა უფლება დაცულია.</p>
         </div>
     </footer>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
