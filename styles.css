@@ -1,11 +1,11 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and Fonts */
+
 body {
     font-family: 'Noto Sans Georgian', Arial, sans-serif;
     line-height: 1.6;
@@ -14,14 +14,14 @@ body {
     font-size: 16px;
 }
 
-/* Container for Centering Content */
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header Styles */
+
 header {
     background-color: #1a252f;
     color: #f4f4f4;
@@ -228,11 +228,11 @@ footer .container {
 
 footer p {
     margin: 0;
-    font-size: 14px; /* Adjust text size if needed */
+    font-size: 14px; 
 }
 
 .clickable-image {
-    width: 100px; /* Keep image small */
+    width: 100px; 
     height: auto;
     margin-left: 80px;
 }

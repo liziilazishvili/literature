@@ -100,6 +100,38 @@
         footer p {
             font-size: 0.9rem; /* Smaller font size for footer */
         }
+
+        /* Interesting Facts Section */
+        .facts {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .facts h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .fact-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .fact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .fact-item p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +176,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUlsbg7g09V-t9rhZXmVPAjXoiO6LTdHnikg&s" alt="საუკეთესო პოეტური კრებული">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMfqZmmO2v5dMEePXXGwJGSnXdoh8WCCzLsM7xzkOiii28gSjeXTPLPvpUIOhRpP_irGM&usqp=CAU" alt="საუკეთესო პოეტური კრებული">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>საუკეთესო ლიტერატურული კრებული</h5>
                             <p>წლის ლიტერატურული კრებული ცნობილია“.</p>
@@ -164,10 +196,27 @@
         </div>
     </section>
 
-    <section class="about">
+    <!-- Interesting Facts Section -->
+    <section class="facts">
         <div class="container">
-            <h2>ჩვენს შესახებ</h2>
-            <p>„წიგნები და ლიტერატურა“ არის სივრცე, სადაც ყველა წიგნის მოყვარული იკრიბება, რათა გაუზიაროს თავიანთი საყვარელი ნაწარმოებები, გამოთქვას მოსაზრებები და განიხილოს ლიტერატურული შედევრები. აქ თქვენ იპოვით წიგნებს ყველა ჟანრში.</p>
+            <h3>საინტერესო ფაქტები წიგნების შესახებ</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fact-item">
+                        <p> მსოფლიოს ყველაზე მოცულობით წიგნს „კლენკის ატლასი“ ჰქვია. მისი სიმაღლე 175 სანტიმეტრია, სიგანე კი 190 სანტიმეტრი.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fact-item">
+                        <p>ყველაზე გრძელი რომანი 17 მილიონ სიტყვას შეიცავს, ის მარკ ლიჩმა დაწერა. არსებობს წიგნის ონლაინ ვერსიაც.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fact-item">
+                        <p>მსოფლიოში ყველაზე ძვირადღირებული წიგნი, რომელსაც ფასი ავტორმა დაადო ტომას ალექსანდრ ჰარტმენს ეკუთვნის და ეს ფასი 153 მილიონ ევროს შეადგენს, მიუხედავად იმისა, რომ წიგნი მხოლოდ 13 გვერდს მოიცავს. მისი სახელია „ამოცანა“.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
