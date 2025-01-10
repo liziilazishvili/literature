@@ -16,23 +16,7 @@
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav {
-            margin-top: 15px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+            padding: 10px 0;
         }
 
         .container {
@@ -41,7 +25,27 @@
         }
 
         h1 {
+            text-align: center;
             font-size: 36px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
         }
 
         .filter {
@@ -112,7 +116,7 @@
             <h1>წიგნები და ლიტერატურა</h1>
             <nav>
                 <a href="main_page.html">მთავარი</a>
-                <a href="books.html">წიგნები</a>
+                <a href="books.html" class="active">წიგნები</a>
                 <a href="poetry.html">პოეზია</a>
                 <a href="about_us.html">ჩვენ შესახებ</a>
             </nav>
@@ -157,8 +161,65 @@
                     <p class="author">ავტორი: ფრენსის სკოტ ფიცჯერალდი</p>
                 </div>
 
-                <!-- More book items here -->
+                <!-- Fantasy -->
+                <div class="book-item" data-genre="ფანტასტიკა">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQalo3sVWRndozQ2otWYc52eMx_vL_WuOLJMg&s" alt="ბეჭდების მბრძანებელი">
+                    <h3>"ბეჭდების მბრძანებელი"</h3>
+                    <p class="author">ავტორი: ჯ.რ.რ. ტოლკინი</p>
+                </div>
+                <div class="book-item" data-genre="ფანტასტიკა">
+                    <img src="https://sulakauri.ge/uploads/2023/11/hari-poteri-da-azkabanis-tqhve.webp" alt="ჰარი პოტერი">
+                    <h3>"ჰარი პოტერი"</h3>
+                    <p class="author">ავტორი: ჯოან როულინგი</p>
+                </div>
+                <div class="book-item" data-genre="ფანტასტიკა">
+                    <img src="https://apiv1.biblusi.ge/storage/book/bAHtM9yfOTQ4A9GGWWpN4FsD1BaVzNI8TSFrQqhO.png" alt="დიუნა">
+                    <h3>"დიუნა"</h3>
+                    <p class="author">ავტორი: ფრენკ ჰერბერტი</p>
+                </div>
+                <div class="book-item" data-genre="ფანტასტიკა">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/c/cb/The_Chronicles_of_Narnia_box_set_cover.jpg" alt="ნარნიის ქრონიკები">
+                    <h3>"ნარნიის ქრონიკები"</h3>
+                    <p class="author">ავტორი: კლაივ ლუისი</p>
+                </div>
 
+                <!-- Science Fiction -->
+                <div class="book-item" data-genre="მეცნიერულ-ფანტასტიკა">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYpGPDDg7YImfh20TVU47etFPlylH505biMQ&s" alt="ლაბირინთში მორბენალი">
+                    <h3>"ლაბირინთში მორბენალი"</h3>
+                    <p class="author">ავტორი: ჯეიმს დაშნერი</p>
+                </div>
+
+                <!-- Detective -->
+                <div class="book-item" data-genre="დეტექტივი">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoXd2aVvmb2CI4UpuTaWxU-xZyDYtawCsqfw&s" alt="შერლოკ ჰოლმსის თავგადასავლები">
+                    <h3>"შერლოკ ჰოლმსის თავგადასავლები"</h3>
+                    <p class="author">ავტორი: არტურ კონან დოილი</p>
+                </div>
+                <div class="book-item" data-genre="დეტექტივი">
+                    <img src="https://apiv1.biblusi.ge/storage/book/7rxoebNHMmhfCUC6PpxOrl5YJpJTbUPeuBfqR507.jpg" alt="გოგონა მატარებელში">
+                    <h3>"გოგონა მატარებელში"</h3>
+                    <p class="author">ავტორი: პაულა ჰოუკინსი</p>
+                </div>
+
+                <!-- Romance -->
+                <div class="book-item" data-genre="რომანტიკა">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qX0wiE0VKSvFCN6Oa0mjPNMZT7wypBKlcA&s" alt="სიამაყე და ცრურწმენა">
+                    <h3>"სიამაყე და ცრურწმენა"</h3>
+                    <p class="author">ავტორი: ჯეინ ოსტინი</p>
+                </div>
+                <div class="book-item" data-genre="რომანტიკა">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSscWY7Gmc-UQKyCHkSAP6ZdHeLHb9BrkLcbQ&s" alt="ჯეინ ეარი">
+                    <h3>"ჯეინ ეარი"</h3>
+                    <p class="author">ავტორი: შარლოტ ბრონტე</p>
+                </div>
+
+                <!-- Historical Literature -->
+                <div class="book-item" data-genre="ისტორიული ლიტერატურა">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIcSd5qlxTEU6MaRnPppR735xCSQZmmInkaA&s" alt="გრაფი მონტე-კრისტო">
+                    <h3>"გრაფი მონტე-კრისტო"</h3>
+                    <p class="author">ავტორი: ალექსანდრე დიუმა</p>
+                </div>
             </div>
         </div>
     </section>

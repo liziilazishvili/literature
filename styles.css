@@ -218,3 +218,22 @@ footer p {
         font-size: 1.1rem;
     }
 }
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Increase space between the text and image */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px; /* Adjust text size if needed */
+}
+
+.clickable-image {
+    width: 100px; /* Keep image small */
+    height: auto;
+    margin-left: 80px;
+}
+
