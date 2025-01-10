@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ქართული და უცხოელი პოეტები</title>
+    <title>ქართველი და უცხოელი პოეტები</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
     <style>
         body {
@@ -43,10 +43,17 @@
             text-decoration: none;
             color: white;
             font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         nav ul li a.active {
             font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #3498db; /* Button lighting effect */
+            transform: scale(1.1);
         }
 
         section {
@@ -109,7 +116,7 @@
     <!-- Header Section -->
     <header class="fade-in">
         <div class="container">
-            <h1>ქართული და უცხოელი პოეტები</h1>
+            <h1>ქართველი და უცხოელი პოეტები</h1>
             <nav>
                 <ul>
                     <li><a href="main_page.html">მთავარი</a></li>
@@ -124,8 +131,7 @@
     <!-- Georgian Poets Section -->
     <section class="poetry">
         <div class="container">
-            <h2 class="fade-in">ქართული პოეზია</h2>
-            <p class="fade-in">ქართული პოეზია გამოხატავს საქართველოს სიყვარულს და მისი პოეტური სულის გამოძახილს. აქ წარმოდგენილია პოემები სამშობლოზე.</p>
+            <h2 class="fade-in">ქართველი პოეტები</h2>
             <div class="poetry-list">
                 <div class="poem-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_bRshph1Grqf9i1TWb2vXaja2UC2YQmmPbg&s" alt="სამშობლო">
@@ -144,7 +150,7 @@
                     <p>ილია ჭავჭავაძე</p>
                 </div>
                 <div class="poem-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/%E1%83%9C%E1%83%98%E1%83%99%E1%83%9D%E1%83%9A%E1%83%9D%E1%83%96_%E1%83%91%E1%83%90%E1%83%A0%E1%83%90%E1%83%97%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98.jpg" alt="ლექსი საქართველოსთვის">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/%E1%83%9C%E1%83%98%E1%83%99%E1%83%9D%E1%83%9A%E1%83%9D%E1%83%9A%E1%83%9A%E1%83%9A%E1%83%9C%E1%83%9D%E1%83%A0_%E1%83%91%E1%83%90%E1%83%A0%E1%83%90%E1%83%97%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98.jpg" alt="ლექსი საქართველოსთვის">
                     <p>ნიკოლოზ ბარათაშვილი</p>
                 </div>
             </div>
@@ -155,7 +161,6 @@
     <section class="poetry">
         <div class="container">
             <h2 class="fade-in">უცხოელი პოეტები</h2>
-            <p class="fade-in">უცხოელი პოეტების ლექსები მრავალფეროვნებასა და გრძნობების სიღრმეს ავლენენ. აქ წარმოგიდგენთ მსოფლიო ლიტერატურის საგანძურს.</p>
             <div class="poetry-list">
                 <div class="poem-item">
                     <img src="https://apiv1.biblusi.ge/storage/author/lU7pjn16Tjy76zLWH5TqN6YvTcqkmsXTDhUCKP0n.jpg" alt="შექსპირი">
